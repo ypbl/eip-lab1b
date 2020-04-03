@@ -22,7 +22,7 @@ public class Producer extends javax.swing.JFrame {
      */
     public Producer() throws FileNotFoundException {
         initComponents();
-        exporter = new Exporter("export.txt");   
+        exporter = new Exporter("export.dat");   
     }
 
     /**
