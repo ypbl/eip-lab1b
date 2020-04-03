@@ -174,7 +174,7 @@ public class Producer extends javax.swing.JFrame {
             public void run() {
                 try {
                     new Producer().setVisible(true);
-                } catch (FileNotFoundException ex) {
+                } catch (IOException ex) {
                     System.out.println("Error opening export");
                 }
             }
