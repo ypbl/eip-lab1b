@@ -23,7 +23,7 @@ public class Consumer extends javax.swing.JFrame {
      */
     public Consumer() throws FileNotFoundException {
         initComponents();
-        importer = new Importer("export.txt");
+        importer = new Importer("export.dat");
         
     }
 
