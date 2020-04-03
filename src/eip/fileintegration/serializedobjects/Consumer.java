@@ -99,10 +99,14 @@ public class Consumer extends javax.swing.JFrame {
 
     private void jButtonImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportActionPerformed
        DefaultTableModel model = (DefaultTableModel) this.jTableData.getModel();
-       Product p = (Product) importer.importObject();
-       model.addRow(new Object[]{p.getProductId(),
-            p.getProductDescription(), p.getProductPrice(), p.getProductAmount()}
-        );
+       Product p;
+       do {
+            p = (Product) importer.importObject();
+            if (p != null) {
+                model.addRow(new Object[]{p.getProductId(),
+                    p.getProductDescription(), p.getProductPrice(), p.getProductAmount()});
+            }
+       } while (p!=null);   
     }//GEN-LAST:event_jButtonImportActionPerformed
 
     private void jButtonExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExportActionPerformed
