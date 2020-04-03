@@ -1,7 +1,7 @@
 package eip.fileintegration.serializedobjects;
 
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -21,7 +21,7 @@ public class Consumer extends javax.swing.JFrame {
     /**
      * Creates new form Consumer
      */
-    public Consumer() throws FileNotFoundException {
+    public Consumer() throws IOException {
         initComponents();
         importer = new Importer("export.dat");
         
@@ -142,7 +142,7 @@ public class Consumer extends javax.swing.JFrame {
             public void run() {
                 try {
                     new Consumer().setVisible(true);
-                } catch (FileNotFoundException ex) {
+                } catch (IOException ex) {
                     System.out.println("Error opening file "+ex);
                 }
             }
