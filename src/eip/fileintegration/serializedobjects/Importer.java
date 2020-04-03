@@ -1,6 +1,6 @@
 package eip.fileintegration.serializedobjects;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  *
@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
  */
 public class Importer {
 
-    public Importer(String filename) throws FileNotFoundException {
+    public Importer(String filename) throws IOException {
        
     }
 
