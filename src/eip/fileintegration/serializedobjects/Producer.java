@@ -1,7 +1,7 @@
 package eip.fileintegration.serializedobjects;
 
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +20,7 @@ public class Producer extends javax.swing.JFrame {
     /**
      * Creates new form Producer
      */
-    public Producer() throws FileNotFoundException {
+    public Producer() throws IOException {
         initComponents();
         exporter = new Exporter("export.dat");   
     }
